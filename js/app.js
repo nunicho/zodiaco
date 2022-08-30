@@ -537,8 +537,13 @@ function fechaZodiaco(e) {
   descripcionSigno.innerHTML = `Tu signo es <b> ${signoZodiaco} </b>`;
   descripcionSigno.setAttribute("class", "display-6")
 }else{
-    alert('Corregir los datos')
-  }
+  Swal.fire({   
+   title: 'La fecha ingresada es incorrecta',
+   color: 'rgb(95, 25, 25)',
+   background : 'url(../img/pexels-laker-6156378.jpg)',
+   confirmButtonColor: 'rgb(95, 25, 25)',
+   })
+}
 }
 
 
