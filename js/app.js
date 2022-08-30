@@ -1,3 +1,5 @@
+import {validarFechaNacimiento, validarElemento } from './helpers.js';
+
 
 //------------------------------    ARTICULO    GUÍA ASTROLÓGICA -------------------------------- 
 
@@ -234,7 +236,6 @@ function sagitario (e){
 }
 
 
-
 //------------------------------    ARTICULO    BUSCA TU SIGNO -------------------------------- 
 
 
@@ -257,6 +258,7 @@ formularioElemento.addEventListener("submit", elementoZodiaco);
 function fechaZodiaco(e) {
   e.preventDefault();
   console.log("arranca la función fecha zodíaco");
+  if (validarFechaNacimiento(valFecha)){
   let fechaNacimiento = JSON.stringify(document.getElementById("fecha").value);
   console.log(fechaNacimiento);
   let diaSigno = parseInt(fechaNacimiento.substring(1));
@@ -534,8 +536,9 @@ function fechaZodiaco(e) {
 
   descripcionSigno.innerHTML = `Tu signo es <b> ${signoZodiaco} </b>`;
   descripcionSigno.setAttribute("class", "display-6")
-
-
+}else{
+    alert('Corregir los datos')
+  }
 }
 
 
@@ -544,8 +547,7 @@ function fechaZodiaco(e) {
 function elementoZodiaco (e){
     e.preventDefault();
     console.log("arranca la función elemento zodíaco");
-    
-    
+     if (validarElemento(valElemento)){
     let eleZodiaco = JSON.stringify(document.getElementById("elemento").value);      
     let elementoImagen = document.querySelector("#elementoImagen");
     let elementoSigno = document.querySelector("#elementoSigno");
@@ -620,8 +622,10 @@ function elementoZodiaco (e){
         elementoNaturaleza.innerHTML = `Los signos de agua son <b> puros, nobles y cristalinos </b>. Nunca ocultan lo que piensan o sienten y siempre reflejan y expresan sus verdaderas emociones. Es una de las mejores cosas de un Cáncer, un Escorpio o un Piscis: son fáciles de leer y nunca, pero nunca, te engañarán ni te serán infieles. Se les nota todo en la cara.`
     
     }
-
+}else{
+    alert('Elegir un elemento')
+  }
 }
-
+}
 
 
