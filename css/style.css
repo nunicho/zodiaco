@@ -5,6 +5,11 @@ h1 {
     color: beige;
 }
 
+h2 {
+    font-family: 'Grenze Gotisch', cursive;
+    color: rgb(95, 25, 25);
+}
+
 body{
     background-color : grey;
     background-image : url(../img/pexels-laker-6156378.jpg);
@@ -20,4 +25,27 @@ body{
 
     .card-title {
         color: brown;
+    }
+
+    #cuadroDebajoTitulo{
+        background-color: rgba(245, 245, 220, 0.719);
+    }
+
+
+    #cuadroDebajoBuscaTuSigno{
+        background-color: rgba(245, 245, 220, 0.719);
+    }
+
+
+    #cuadroFinal{
+        background-color: rgba(245, 245, 220, 0.719);
+    }
+
+    .cuadroFinalTitulos{
+        font-family: 'Grenze Gotisch', cursive;
+    color: rgb(95, 25, 25);
+    }
+
+    footer{
+        background-color: rgba(97, 97, 80, 0.849)
     }
