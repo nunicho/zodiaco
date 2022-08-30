@@ -626,6 +626,6 @@ function elementoZodiaco (e){
     alert('Elegir un elemento')
   }
 }
-}
+
 
 
